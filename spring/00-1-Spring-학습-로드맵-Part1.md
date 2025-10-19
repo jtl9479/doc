@@ -575,112 +575,124 @@ Deployment Layer (51-68장)
 ```markdown
 # Spring 68개 챕터 완주 체크리스트
 
-## 기초편 (00-10장) - 예상 2주
+## 기본편 (00-02장)
 - [ ] 00장: Spring 학습 로드맵
-- [ ] 01장: Spring이란?
-- [ ] 02장: 개발 환경 설정
+- [ ] 01장: Spring이란? (등장 배경, 핵심 개념)
+- [ ] 02장: 개발 환경 설정 (Spring Boot, IntelliJ/Eclipse)
+
+✅ 기본편 완료 날짜: __________
+
+---
+
+## Spring Core (03-10장)
 - [ ] 03장: IoC 컨테이너
 - [ ] 04장: DI (Dependency Injection)
 - [ ] 05장: Bean 생명주기
 - [ ] 06장: Bean 스코프
-- [ ] 07장: 어노테이션 상세
+- [ ] 07장: 어노테이션 상세 (@Component, @Configuration, @Bean 등)
 - [ ] 08장: AOP 개념과 활용
 - [ ] 09장: SpEL과 프로퍼티
-- [ ] 10장: 비동기 처리와 스케줄링
+- [ ] 10장: 비동기 처리와 스케줄링 (@Async, @Scheduled)
 
 ✅ 기초편 완료 날짜: __________
 
 ---
 
-## Web 편 (11-20장) - 예상 2주
+## Spring MVC (11-18장)
 - [ ] 11장: Spring MVC 개요
-- [ ] 12장: Controller & RequestMapping
-- [ ] 13장: View & Template Engine
-- [ ] 14장: Form & Validation
-- [ ] 15장: Session & Cookie
-- [ ] 16장: Interceptor & Filter
-- [ ] 17장: Exception Handling
-- [ ] 18장: File Upload & Download
-- [ ] 19장: i18n & Localization
-- [ ] 20장: WebSocket
+- [ ] 12장: 컨트롤러와 요청 매핑
+- [ ] 13장: 뷰와 모델
+- [ ] 14장: 폼 처리와 검증
+- [ ] 15장: 파일 업로드
+- [ ] 16장: 예외 처리
+- [ ] 17장: 인터셉터와 필터
+- [ ] 18장: 국제화 (i18n)
 
-✅ Web 편 완료 날짜: __________
+✅ Spring MVC 편 완료 날짜: __________
 
 ---
 
-## Data Access 편 (21-30장) - 예상 2주
-- [ ] 21장: JDBC Template
-- [ ] 22장: JPA & Hibernate 기초
-- [ ] 23장: Entity & Mapping
-- [ ] 24장: JPQL & Query Methods
-- [ ] 25장: Fetch & Cascade
-- [ ] 26장: Transaction 관리
-- [ ] 27장: Multi-DataSource
-- [ ] 28장: Flyway & Liquibase
-- [ ] 29장: Caching (Redis)
-- [ ] 30장: Elasticsearch
+## 데이터 접근 (19-28장)
+- [ ] 19장: 데이터베이스 연동 개요
+- [ ] 20장: Spring JDBC
+- [ ] 21장: 트랜잭션 관리
+- [ ] 22장: 다중 데이터소스와 Master-Slave 구성
+- [ ] 23장: Bean Validation (JSR-303)
+- [ ] 24장: JPA 소개와 설정
+- [ ] 25장: Spring Data JPA
+- [ ] 26장: 데이터베이스 스키마 관리 (Flyway, Liquibase)
+- [ ] 27장: QueryDSL
+- [ ] 28장: MyBatis 연동
 
-✅ Data Access 편 완료 날짜: __________
+✅ 데이터 접근 편 완료 날짜: __________
 
 ---
 
-## REST API 편 (31-40장) - 예상 2주
-- [ ] 31장: REST API 설계
-- [ ] 32장: @RestController
-- [ ] 33장: Request & Response
-- [ ] 34장: API 문서화 (Swagger)
-- [ ] 35장: Error Handling
-- [ ] 36장: HATEOAS
-- [ ] 37장: API Versioning
-- [ ] 38장: Rate Limiting
-- [ ] 39장: GraphQL
-- [ ] 40장: gRPC
+## Spring Boot (29-36장)
+- [ ] 29장: Spring Boot 소개
+- [ ] 30장: 자동 설정 원리
+- [ ] 31장: 프로퍼티 관리
+- [ ] 32장: Actuator
+- [ ] 33장: 애플리케이션 관측성 (Micrometer, Sleuth, Zipkin)
+- [ ] 34장: 로깅
+- [ ] 35장: 테스트 (단위/통합)
+- [ ] 36장: 프로파일 관리
+
+✅ Spring Boot 편 완료 날짜: __________
+
+---
+
+## REST API 개발 (37-45장)
+- [ ] 37장: REST API 개념
+- [ ] 38장: RESTful 컨트롤러
+- [ ] 39장: JSON 처리
+- [ ] 40장: API 문서화 (Swagger/OpenAPI)
+- [ ] 41장: CORS 설정
+- [ ] 42장: API 예외 처리
+- [ ] 43장: API 버전 관리
+- [ ] 44장: WebSocket과 STOMP (실시간 통신)
+- [ ] 45장: Spring for GraphQL
 
 ✅ REST API 편 완료 날짜: __________
 
 ---
 
-## Security 편 (41-50장) - 예상 2주
-- [ ] 41장: Spring Security 기초
-- [ ] 42장: Authentication
-- [ ] 43장: Authorization
-- [ ] 44장: JWT
-- [ ] 45장: OAuth2
-- [ ] 46장: Session Management
-- [ ] 47장: CORS & CSRF
-- [ ] 48장: Method Security
-- [ ] 49장: Encryption
-- [ ] 50장: Observability (Logging, Monitoring)
+## Spring Security (46-50장)
+- [ ] 46장: Spring Security 개요
+- [ ] 47장: 인증 처리
+- [ ] 48장: 권한 관리
+- [ ] 49장: JWT 기반 인증
+- [ ] 50장: OAuth 2.0과 소셜 로그인
 
-✅ Security 편 완료 날짜: __________
+✅ Spring Security 편 완료 날짜: __________
 
 ---
 
-## 고급 편 (51-60장) - 예상 3주
-- [ ] 51장: Spring Batch
-- [ ] 52장: Spring Events
-- [ ] 53장: Kafka Integration
-- [ ] 54장: Reactive Programming
-- [ ] 55장: R2DBC
-- [ ] 56장: Spring Cloud Gateway
-- [ ] 57장: Circuit Breaker (Resilience4j)
-- [ ] 58장: Service Discovery (Eureka)
-- [ ] 59장: Config Server
-- [ ] 60장: Distributed Tracing
+## 고급 기능 (51-59장)
+- [ ] 51장: Spring Cache (캐싱)
+- [ ] 52장: Spring Events와 이벤트 기반 설계
+- [ ] 53장: Spring Kafka 연동
+- [ ] 54장: Spring Batch (배치 처리)
+- [ ] 55장: Spring WebFlux (리액티브)
+- [ ] 56장: R2DBC와 Reactive 데이터베이스
+- [ ] 57장: Spring Cloud Config
+- [ ] 58장: Spring Cloud Gateway
+- [ ] 59장: Resilience4j로 장애 대응 (Circuit Breaker, Retry)
 
-✅ 고급 편 완료 날짜: __________
+✅ 고급 기능 편 완료 날짜: __________
 
 ---
 
-## 실전 프로젝트 편 (61-68장) - 예상 3주
-- [ ] 61장: 게시판 시스템
-- [ ] 62장: RESTful API 서버
-- [ ] 63장: Docker & Kubernetes
-- [ ] 64장: 마이크로서비스 아키텍처
-- [ ] 65장: Spring Cloud Netflix
-- [ ] 66장: 멀티모듈 프로젝트
-- [ ] 67장: 성능 최적화
-- [ ] 68장: 이커머스 플랫폼
+## 실전 프로젝트 & 베스트 프랙티스 (60-68장)
+- [ ] 60장: 게시판 시스템 (종합 프로젝트)
+- [ ] 61장: RESTful API 서버 구축
+- [ ] 62장: Docker & Kubernetes 배포
+- [ ] 63장: 마이크로서비스 아키텍처
+- [ ] 64장: Spring Cloud Netflix OSS (Eureka, Ribbon, Hystrix)
+- [ ] 65장: 멀티모듈 프로젝트 설계
+- [ ] 66장: Spring 애플리케이션 성능 최적화
+- [ ] 67장: Spring 베스트 프랙티스
+- [ ] 68장: 실무 종합 프로젝트 (이커머스 플랫폼)
 
 ✅ 실전 프로젝트 편 완료 날짜: __________
 
