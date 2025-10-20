@@ -1,10 +1,21 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python:*)",
-      "Bash(dir \"C:\\Users\\home\\Desktop\\document\")",
-      "Bash(dir:*)",
-      "Bash(findstr:*)"
+      "Bash(done)",
+      "Bash(bash \"C:\\Users\\user\\Desktop\\doc\\doc\\check_docs.sh\")",
+      "Bash(for f in \"01-Docker란-무엇인가.md\" \"02-아키텍처와-내부-동작-원리.md\" \"05-설치-및-환경-설정.md\" \"10-Docker-네트워크.md\" \"15-LK-Trade-Docker-구성.md\" \"19-개발-환경-구성.md\")",
+      "Bash(do echo \"=== $f ===\")",
+      "Bash(powershell -Command \"Get-Content ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\21-디버깅과-트러블슈팅.md'' | Measure-Object -Line\")",
+      "Bash(powershell -Command \"Get-Content ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\21-디버깅과-트러블슈팅.md'' -Tail 50\")",
+      "Bash(powershell -Command \"Select-String -Path ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\27-보안.md'' -Pattern ''주니어'' | Select-Object -First 5 LineNumber,Line\")",
+      "Bash(powershell -Command \"Select-String -Path ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\28-백업과-복구.md'' -Pattern ''주니어'' | Select-Object -First 5 LineNumber,Line\")",
+      "Bash(powershell -Command \"(Get-Content ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\27-보안.md'' | Select-String -Pattern ''^## '' | Select-Object -Last 5).Line\")",
+      "Bash(powershell -Command \"(Get-Content ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\28-백업과-복구.md'' | Select-String -Pattern ''^## '' | Select-Object -Last 5).Line\")",
+      "Bash(powershell -Command \"Get-Content ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\30-CICD-GitHub-Actions.md'' | Measure-Object -Line | Select-Object -ExpandProperty Lines\")",
+      "Bash(powershell -Command \"Get-Content ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\31-CICD-Jenkins.md'' | Measure-Object -Line | Select-Object -ExpandProperty Lines\")",
+      "Bash(powershell -Command \"(Get-Content ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\30-CICD-GitHub-Actions.md'' | Select-String -Pattern ''^## '').Line | Select-Object -First 20\")",
+      "Bash(powershell -Command \"(Get-Content ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\31-CICD-Jenkins.md'' | Select-String -Pattern ''^## '').Line | Select-Object -First 20\")",
+      "Bash(powershell -Command \"Select-String -Path ''C:\\Users\\user\\Desktop\\doc\\doc\\docker\\31-CICD-Jenkins.md'' -Pattern ''왜.*필요|Why'' | Select-Object -First 5 LineNumber,Line\")"
     ],
     "deny": [],
     "ask": []
