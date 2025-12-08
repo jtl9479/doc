@@ -3,7 +3,8 @@
     "allow": [
       "Bash(sort -t: -k2 -n)",
       "Bash(python:*)",
-      "Bash(chcp 65001)"
+      "Bash(chcp 65001)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []
