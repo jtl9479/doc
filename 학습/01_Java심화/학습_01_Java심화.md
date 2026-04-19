@@ -2,24 +2,27 @@
 
 ## Step 목차
 
-| Step | 항목 | 카테고리 |
-|------|------|----------|
-| Step 1 | Effective Java — 객체 생성과 파괴 | Effective Java |
-| Step 2 | Effective Java — equals/hashCode/toString | Effective Java |
-| Step 3 | Effective Java — 클래스 설계 원칙 | Effective Java |
-| Step 4 | Effective Java — 제네릭 | Effective Java |
-| Step 5 | Effective Java — 람다와 스트림 | Effective Java |
-| Step 6 | Effective Java — 예외 | Effective Java |
-| Step 7 | 동시성 — 스레드 기초 | 동시성 |
-| Step 8 | 동시성 — synchronized와 가시성 | 동시성 |
-| Step 9 | 동시성 — Lock과 Atomic | 동시성 |
-| Step 10 | 동시성 — Executor와 동시성 컬렉션 | 동시성 |
-| Step 11 | 동시성 — 데드락과 실전 패턴 | 동시성 |
-| Step 12 | Virtual Thread + Java 21+ | 최신 기능 |
-| Step 13 | JVM 메모리 + GC — 면접 대비 | JVM |
-| Step 14 | 자료구조 — Java Collections 내부 구조 | 자료구조 |
-| Step 15 | 병렬 — Parallel Stream + Fork/Join | 병렬 |
-| Step 16 | I/O와 NIO 기본 개념 | I/O |
+| Step | 항목 | 카테고리 | 학습 일자 |
+|------|------|----------|----------|
+| Step 1 | Effective Java — 객체 생성과 파괴 | Effective Java | |
+| Step 2 | Effective Java — equals/hashCode/toString | Effective Java | |
+| Step 3 | Effective Java — 클래스 설계 원칙 | Effective Java | |
+| Step 4 | Effective Java — 제네릭 | Effective Java | |
+| Step 5 | Effective Java — 람다와 스트림 | Effective Java | |
+| Step 6 | Effective Java — 예외 | Effective Java | |
+| Step 7 | Effective Java — Enum과 애너테이션 | Effective Java | |
+| Step 8 | Effective Java — 메서드 설계 | Effective Java | |
+| Step 9 | String 내부 구조 | Java 내부 | |
+| Step 10 | 동시성 — 스레드 기초 | 동시성 | |
+| Step 11 | 동시성 — synchronized와 가시성 | 동시성 | |
+| Step 12 | 동시성 — Lock과 Atomic | 동시성 | |
+| Step 13 | 동시성 — Executor와 동시성 컬렉션 | 동시성 | |
+| Step 14 | 동시성 — 데드락과 실전 패턴 | 동시성 | |
+| Step 15 | Virtual Thread + Java 21+ | 최신 기능 | |
+| Step 16 | JVM 메모리 + GC — 면접 대비 | JVM | |
+| Step 17 | 자료구조 — Java Collections 내부 구조 | 자료구조 | |
+| Step 18 | 병렬 — Parallel Stream + Fork/Join | 병렬 | |
+| Step 19 | I/O와 NIO 기본 개념 | I/O | |
 
 ---
 
@@ -105,9 +108,46 @@
 
 ---
 
-### Step 7. 동시성 — 스레드 기초
+### Step 7. Effective Java — Enum과 애너테이션
+
+| 아이템 | 학습 목표 |
+|--------|----------|
+| Item 34: int 상수 대신 열거 타입을 사용하라 | int 상수 패턴의 문제점(타입 안전성 없음, 네임스페이스 없음, 깨지기 쉬움)을 설명 가능. enum이 이를 해결하는 이유를 설명 가능. enum에 필드/메서드를 추가하여 데이터와 행위를 함께 가지는 패턴을 적용 가능. |
+| Item 35: ordinal 메서드 대신 인스턴스 필드를 사용하라 | ordinal()에 의존하면 enum 순서 변경 시 깨지는 이유. 별도 필드로 값을 관리하는 방법을 설명 가능. |
+| Item 36: 비트 필드 대신 EnumSet을 사용하라 | EnumSet이 비트 연산만큼 빠르면서 타입 안전한 이유를 설명 가능. |
+| Item 37: ordinal 인덱싱 대신 EnumMap을 사용하라 | EnumMap이 내부적으로 배열 기반이라 빠르고 타입 안전한 이유를 설명 가능. |
+| Item 39: 명명 패턴보다 애너테이션을 사용하라 | JUnit 3의 test 접두사 → JUnit 4의 @Test로 진화한 이유를 설명 가능. 커스텀 애너테이션을 정의하고 리플렉션으로 처리하는 원리를 설명 가능. |
+| Item 40: @Override 애너테이션을 일관되게 사용하라 | @Override 없이 오버라이드하면 실수로 오버로딩이 되는 버그를 설명 가능. |
+
+---
+
+### Step 8. Effective Java — 메서드 설계
+
+| 아이템 | 학습 목표 |
+|--------|----------|
+| Item 49: 매개변수가 유효한지 검사하라 | public 메서드에서 매개변수 유효성 검사를 하는 이유(빠른 실패, 명확한 예외). Objects.requireNonNull(), assert의 사용 시점을 설명 가능. |
+| Item 50: 적시에 방어적 복사본을 만들라 | 가변 객체(Date 등)를 필드로 받을 때 방어적 복사가 필요한 이유(외부에서 내부 상태 변경 방지)를 설명 가능. 불변 객체(LocalDateTime)를 쓰면 방어적 복사가 불필요한 이유를 설명 가능. |
+| Item 52: 다중정의는 신중히 사용하라 | 오버로딩이 컴파일 타임에 결정되어 혼란을 주는 사례를 설명 가능. 오버라이딩(런타임 결정)과의 차이를 설명 가능. |
+| Item 54: null이 아닌, 빈 컬렉션이나 배열을 반환하라 | null 반환 시 호출자가 매번 null 체크해야 하는 문제. Collections.emptyList() 등으로 빈 컬렉션을 반환하는 패턴을 설명 가능. |
+
+---
+
+### Step 9. String 내부 구조
+
+| 학습 항목 | 학습 목표 |
+|----------|----------|
+| String 불변(Immutable)인 이유 | 보안(네트워크 연결, 파일 경로), 해시코드 캐싱(HashMap 키), 스레드 안전, String Pool 활용. 4가지 이유를 설명 가능. |
+| String Pool (Intern Pool) | 리터럴 문자열이 힙의 String Pool에 저장되어 재사용되는 원리. `"abc" == "abc"`가 true인 이유. `new String("abc")`는 Pool을 쓰지 않는 이유. intern()의 동작을 설명 가능. |
+| String vs StringBuilder vs StringBuffer | String: 불변, 연결 시 매번 새 객체 생성(O(n²)). StringBuilder: 가변, 단일 스레드용, 빠름. StringBuffer: 가변, 스레드 안전(synchronized), 느림. 선택 기준을 설명 가능. |
+| 문자열 연결 성능 | 반복문에서 `+` 연결이 O(n²)인 이유. StringBuilder가 O(n)인 이유. Java 9+의 StringConcatFactory(invokedynamic 기반 최적화)를 개념 수준 설명 가능. |
+| Compact Strings (Java 9+) | Java 9 이전: char[] (2바이트/문자). Java 9+: Latin-1이면 byte[] (1바이트/문자), 아니면 UTF-16. 메모리 절약 효과를 설명 가능. |
+
+---
+
+### Step 10. 동시성 — 스레드 기초
 
 **학습 수단**: 김영한 자바 고급 1 (멀티스레드와 동시성) 참고 + Claude 질의
+
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -118,7 +158,7 @@
 
 ---
 
-### Step 8. 동시성 — synchronized와 가시성
+### Step 11. 동시성 — synchronized와 가시성
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -129,7 +169,7 @@
 
 ---
 
-### Step 9. 동시성 — Lock과 Atomic
+### Step 12. 동시성 — Lock과 Atomic
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -140,7 +180,7 @@
 
 ---
 
-### Step 10. 동시성 — Executor와 동시성 컬렉션
+### Step 13. 동시성 — Executor와 동시성 컬렉션
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -152,7 +192,7 @@
 
 ---
 
-### Step 11. 동시성 — 데드락과 실전 패턴
+### Step 14. 동시성 — 데드락과 실전 패턴
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -163,7 +203,7 @@
 
 ---
 
-### Step 12. Virtual Thread + Java 21+
+### Step 15. Virtual Thread + Java 21+
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -178,7 +218,7 @@
 
 ---
 
-### Step 13. JVM 메모리 + GC — 면접 대비
+### Step 16. JVM 메모리 + GC — 면접 대비
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -194,7 +234,7 @@
 
 ---
 
-### Step 14. 자료구조 — Java Collections 내부 구조
+### Step 17. 자료구조 — Java Collections 내부 구조
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -213,7 +253,7 @@
 
 ---
 
-### Step 15. 병렬 — Parallel Stream + Fork/Join
+### Step 18. 병렬 — Parallel Stream + Fork/Join
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -226,7 +266,7 @@
 
 ---
 
-### Step 16. I/O와 NIO 기본 개념
+### Step 19. I/O와 NIO 기본 개념
 
 | 학습 항목 | 학습 목표 |
 |----------|----------|
@@ -247,6 +287,16 @@
 - [ ] "정적 팩토리 메서드의 장점 4가지" 즉시 답변 가능
 - [ ] "상속 대신 컴포지션을 쓰는 이유" 구체적 사례로 설명 가능
 - [ ] "PECS 원칙이란?" 설명 + 코드 적용 가능
+- [ ] "int 상수 대신 enum을 쓰는 이유" 설명 가능
+- [ ] "EnumSet, EnumMap을 언제 쓰는가" 설명 가능
+- [ ] "null 대신 빈 컬렉션을 반환해야 하는 이유" 설명 가능
+- [ ] "방어적 복사란? 불변 객체를 쓰면 왜 불필요한가" 설명 가능
+
+### String
+- [ ] "String이 불변인 이유 4가지" 즉시 답변 가능
+- [ ] "String Pool이란? new String()과의 차이" 설명 가능
+- [ ] "String vs StringBuilder vs StringBuffer 차이와 선택 기준" 설명 가능
+- [ ] "반복문에서 문자열 + 연결이 느린 이유" 설명 가능
 
 ### 동시성
 - [ ] "synchronized vs ReentrantLock 차이와 선택 기준" 3분 설명 가능
@@ -300,16 +350,19 @@
 | Step 4 | Effective Java — 제네릭 | 미시작 |
 | Step 5 | Effective Java — 람다와 스트림 | 미시작 |
 | Step 6 | Effective Java — 예외 | 미시작 |
-| Step 7 | 동시성 — 스레드 기초 | 미시작 |
-| Step 8 | 동시성 — synchronized와 가시성 | 미시작 |
-| Step 9 | 동시성 — Lock과 Atomic | 미시작 |
-| Step 10 | 동시성 — Executor와 동시성 컬렉션 | 미시작 |
-| Step 11 | 동시성 — 데드락과 실전 패턴 | 미시작 |
-| Step 12 | Virtual Thread + Java 21+ | 미시작 |
-| Step 13 | JVM 메모리 + GC — 면접 대비 | 미시작 |
-| Step 14 | 자료구조 — Java Collections 내부 구조 | 미시작 |
-| Step 15 | 병렬 — Parallel Stream + Fork/Join | 미시작 |
-| Step 16 | I/O와 NIO 기본 개념 | 미시작 |
+| Step 7 | Effective Java — Enum과 애너테이션 | 미시작 |
+| Step 8 | Effective Java — 메서드 설계 | 미시작 |
+| Step 9 | String 내부 구조 | 미시작 |
+| Step 10 | 동시성 — 스레드 기초 | 미시작 |
+| Step 11 | 동시성 — synchronized와 가시성 | 미시작 |
+| Step 12 | 동시성 — Lock과 Atomic | 미시작 |
+| Step 13 | 동시성 — Executor와 동시성 컬렉션 | 미시작 |
+| Step 14 | 동시성 — 데드락과 실전 패턴 | 미시작 |
+| Step 15 | Virtual Thread + Java 21+ | 미시작 |
+| Step 16 | JVM 메모리 + GC — 면접 대비 | 미시작 |
+| Step 17 | 자료구조 — Java Collections 내부 구조 | 미시작 |
+| Step 18 | 병렬 — Parallel Stream + Fork/Join | 미시작 |
+| Step 19 | I/O와 NIO 기본 개념 | 미시작 |
 
 ---
 
